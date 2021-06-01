@@ -1,10 +1,5 @@
 # Pyget
 
-
-![version 1.7](https://img.shields.io/badge/version-0.28-green.svg)
-![python 3.7](https://img.shields.io/badge/python-2.7.2-yellow.svg)
-![platform windows](https://img.shields.io/badge/platform-linux-red.svg)
-
 Contents:
 
 1. [About Pyget](#about-pyget)
