@@ -39,7 +39,7 @@ Dependencies:
 -Web: requests, urllib
     
 
-#### Main program installation:
+<b>Main program installation:</b>
 
 To install PyGet, `git clone https://github.com/ahmishra/Pyget/` in your desired
 installation directory (~/pyget is recommended).  Ensure that pyget.py is 
@@ -62,7 +62,17 @@ that the filename "pyget.py" is executable, and execute
 Windows 7+, Older widnows versions are not tested or supported on this program
 Python 3.6+ Older python versions are not tested or supported on this program
 
-##### Support for Linux and Mac
+<b>Support for Linux and Mac</b>
 We are planning to release that, SOON.
+
+## Credits :)
+- Setup: Aryan Mishra
+- Backend/Databases: Aryan Mishra
+- Frontend/UI: Aryan Mishra
+- Developing: Aryan Mishra
+- Testing: Aryan Mishta
+- Deploying: Aryan Mishra
+
+<br>
 
 # Thanks for Checking In! ❤
