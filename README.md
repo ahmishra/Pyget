@@ -41,7 +41,7 @@ Dependencies:
 
 <b>Main program installation:</b>
 
-To install PyGet, `git clone https://github.com/ahmishra/Pyget/` in your desired
+To install PyGet, `git clone https://github.com/ahmishra/Pyget.git` in your desired
 installation directory (~/pyget is recommended).  Ensure that pyget.py is 
 executable (as user, chmod +x pyget.py) and then symlink pyget.py to /usr/bin/pyget 
 for convenience.  If the last step is not followed, you will have to cd into the folder
