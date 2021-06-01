@@ -36,10 +36,10 @@ Pyget can perform many fucntions, for example:
 PyGet requires a few dependencies that you can install in the using the `install_requirements` function slated inside `pyget.py`
 
 Dependencies:
-    Getting System Apps: Winapps
-    Databases: SQlite3
-    Lanaguage Scraping: Regex
-    Web: requests, urllib
+-Getting System Apps: Winapps
+-Databases: SQlite3
+-Lanaguage Scraping: Regex
+-Web: requests, urllib
     
 
 Main program installation:
