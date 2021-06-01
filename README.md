@@ -1,9 +1,9 @@
 # Pyget
 
 
-[python37]https://img.shields.io/badge/python-3.7-red
-[version1.7]https://img.shields.io/badge/app-v1.7-blue
-[platform_windpws]https://img.shields.io/badge/platform-windows-green
+![python37](https://img.shields.io/badge/python-3.7-red)
+![version1.7](https://img.shields.io/badge/app-v1.7-blue)
+![platform_windpws](https://img.shields.io/badge/platform-windows-green)
 
 Contents:
 
