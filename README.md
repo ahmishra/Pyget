@@ -72,6 +72,10 @@ We are planning to release that, SOON.
 - Testing: Aryan Mishta
 - Deploying: Aryan Mishra
 
+<small><b>Warning: If you received this program from any source other than
+github, please check the source code! You may have
+downloaded a file with malicious code injected.<b></small>
+
 <br>
 
 # Thanks for Checking In!! ❤
