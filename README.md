@@ -40,10 +40,10 @@ Dependencies:
 -Web: requests, urllib
     
 
-Main program installation:
+#### Main program installation:
 
-To install PyGet, `git clone placeholder` in your desired
-installation directory (~/git/pyget is recommended).  Ensure that pyget.py is 
+To install PyGet, `git clone https://github.com/ahmishra/Pyget/` in your desired
+installation directory (~/pyget is recommended).  Ensure that pyget.py is 
 executable (as user, chmod +x pyget.py) and then symlink pyget.py to /usr/bin/pyget 
 for convenience.  If the last step is not followed, you will have to cd into the folder
 containing pyget.py and run './pyget.py' that way. 
