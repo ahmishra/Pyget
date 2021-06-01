@@ -1,0 +1,5 @@
+winapps==0.2.0
+sqlite3==2.6.0
+re==2.2.1
+requests==2.25.1
+urllib.request==3.7
