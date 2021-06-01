@@ -21,9 +21,9 @@ Pyget can perform many fucntions, for example:
 
 # Basic Usage: ~/Pyget> python pyget.py
 # Warning: If you received this program from any source other than
-discord, please check the source code! You may have
+github, please check the source code! You may have
 downloaded a file with malicious code injected. 
-# App Version: 1.7
+# App Version: 1.75
 # System Requiremets: Windows 7+, Older widnows versions are not tested or supported on this program
 # Python 3.6+ Older python versions are not tested or supported on this program
 
