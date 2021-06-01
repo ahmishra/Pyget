@@ -23,7 +23,7 @@ Pyget can perform many fucntions, for example:
 # Warning: If you received this program from any source other than
 github, please check the source code! You may have
 downloaded a file with malicious code injected. 
-# App Version: 1.75
+# App Version: 1.71
 # System Requiremets: Windows 7+, Older widnows versions are not tested or supported on this program
 # Python 3.6+ Older python versions are not tested or supported on this program
 # Dependencies: Urllib, Requests, Winapp, SQlite3, regex
