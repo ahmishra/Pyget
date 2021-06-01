@@ -20,18 +20,18 @@ Contents:
 Pyget is a low-level clone of Microsoft's WinGet / A CLI Download Manager
 Pyget can perform many fucntions, for example:
 
--- `pyget install`: For installing a new app
--- `pyget uninstall`: For uninstalling a app
--- `pyget list`: For listing all of the installed apps
--- `pyget listsearch`: Search for an already installed program in your PC
+- `pyget install`: For installing a new app
+- `pyget uninstall`: For uninstalling a app
+- `pyget list`: For listing all of the installed apps
+- `pyget listsearch`: Search for an already installed program in your PC
 
--- `pyget add`: Add a new app to your app library (the download URL of the app should be dynamic i.e. which can start the download by visting that link
---  rather than clicking on a button or which requires user input. If it requires user input or the link is not applicable the application will
+- `pyget add`: Add a new app to your app library (the download URL of the app should be dynamic i.e. which can start the download by visting that link
+-  rather than clicking on a button or which requires user input. If it requires user input or the link is not applicable the application will
 --  launch a Procedural install method.)
 
--- `pyget remove`: Remove an app from your app library
--- `pyget myapps`: For listing all of the apps in your app library
--- `pyget downloads`: List all of the files in your downloads folder
+- `pyget remove`: Remove an app from your app library
+- `pyget myapps`: For listing all of the apps in your app library
+- `pyget downloads`: List all of the files in your downloads folder
 
 ## Installation:
 
