@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Your PC Apps{% endblock title %}
+
+{% block content %}
+
+{% for i in apps %}
+    {{ i.name }}
+    <br>
+
+{% endfor %}
+
+{% endblock content %}

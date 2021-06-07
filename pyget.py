@@ -57,14 +57,15 @@ def install_requirements():
 # install_requirements()
 
 
-import main
+import cli
+import gui
 
 
-# RUN FUNCTION (TO TURN THE APP ON / OFF)\
+# RUN FUNCTIONS (TO TURN THE APP ON / OFF)
 
-def run():
+def run_cli():
 	# Intialization the App
-	pyget = main.Pyget()
+	pyget = cli.Pyget()
 
 	# App Loop
 	while True:
@@ -117,9 +118,15 @@ def run():
 			print("Unrecognized Command")
 
 
+
+
+def run_gui():
+	gui.app.run(debug=True, port="8000")
+
 """
 Running the app. 
 Comment out if want to turn the application OF. Uncomment if want to turn application ON.
 """
 
-run()
+run_gui() # For Running The Graphical User Interface.
+# run_cli() # For Running The Command-Line-Interface.

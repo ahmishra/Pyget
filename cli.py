@@ -163,9 +163,7 @@ class Pyget():
 			install(filename)
 
 		try:
-			print("Installing...")
 			main()
-			print("Success")
 		except:
 			print("Failure!")
 			print("\nThis type of file/URL is not applicable with our application so will be launching the Procedural install.")

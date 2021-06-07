@@ -1,0 +1,64 @@
+.url {
+	border: none;
+	text-align: center;
+	outline: none;
+	border-bottom: 1px solid crimson;
+}
+
+.url:focus {
+	border-bottom: 1px solid cornflowerblue;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-light: #fdffc4;
+	--clr-dark: #212121;
+	--clr-primary: #dbffa2;
+	--clr-secondary: #c3fcf2;
+	--clr-accent: #ff7750;
+
+	--foreground: var(--clr-dark);
+	--background: var(--clr-light);
+}
+
+.darkmode {
+	color: #fff;
+	background-color: #212121;
+}
+
+.lightmode {
+	background-color: #fff;
+	color: #212121;
+}
+
+
+.dark-mode-toggle {
+	width: 32px;
+	height: 32px;
+	border: none;
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 10px;
+}
+.parralax {
+  background-image: url("https://images.squarespace-cdn.com/content/5913259ea5790a3f09948b06/1494919716722-T2QKKT458BMXIAHYEQB1/profile_pic-01_iTunes.jpg?content-type=image%2Fjpeg");
+  min-height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parralax-2 {
+  background-image: url("https://miro.medium.com/max/740/1*dKNxcjXTOGBVBGlo_DiXew.jpeg");
+  min-height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

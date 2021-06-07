@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+Download A File From The Web
+{% endblock title %}
+
+{% block content %}
+
+{% with messages=get_flashed_messages(with_categories=true) %}
+ {% for category, message in messages %}
+  <div class='alert alert-{{category}} text-center alert-dismissible fade show m-auto' style="font-weight: 700;">
+    {{ message }}
+   </div>
+ {% endfor %}
+{% endwith %}
+
+<br><br><br><br><br><br><br>
+
+<div class="landing container" style="height: 100vh;">
+	<div class="download_app">
+		
+		<form action="{{ url_for('home') }}" method="POST">
+			<p style="text-align: center; font-weight: 700;">URL Of The App</p><br>
+			<input style="width: 100%; background: transparent; color: cornflowerblue;" type="text" name="url" class="url" placeholder="URL for the app (eg. https://www.example.com/executable.exe)">
+
+			<br><br><br>
+			<div class="text-center">
+				<button type="submit" class="btn btn-outline-warning" style="text-align: center;">Download</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="container"><hr></div>
+
+<br><br><br>
+
+<div class="info">
+	<div class="info-1" style="text-align: center;">
+		<h2 style="font-weight: 700;">What is this site?</h2>
+		<p>Over at this website, you can, download apps from only their URL, Uninstall Your PC Apps, Make your own App Library To Install From, And Much More!
+		</p>
+	</div>
+	<br><br>
+	
+	
+	<div class="parralax"></div>
+	
+	<br><br>
+	<div class="info-2" style="text-align: center;">
+		<h2>Why we do?</h2>
+		<p>We do this to make downloads and maintaning your PC apps MUCH easier!
+		</p>
+	</div>
+	<br><br>
+	
+	<div class="parralax-2"></div>
+
+	<br><br>
+	<div class="info-2" style="text-align: center;">
+		<h2>CLI Version</h2>
+		<p>This app has it's own CLI and GUI interfaces feel free to uses any of them (Both interfaces have similar features, and are maintaned regularly)
+		</p>
+	</div>
+	<br><br>
+
+	<br><br>
+</div>
+
+{% endblock content %}
