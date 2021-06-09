@@ -4,3 +4,4 @@ re==2.2.1
 requests==2.25.1
 urllib.request==3.7
 flask==2.0.1
+youtube_dl==2021.6.6

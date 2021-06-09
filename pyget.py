@@ -128,5 +128,5 @@ Running the app.
 Comment out if want to turn the application OF. Uncomment if want to turn application ON.
 """
 
-run_gui() # For Running The Graphical User Interface.
+# run_gui() # For Running The Graphical User Interface.
 # run_cli() # For Running The Command-Line-Interface.

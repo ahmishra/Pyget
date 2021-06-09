@@ -45,7 +45,7 @@ Deploying: Aryan Mishra
 
 """
 
-
+from __future__ import unicode_literals
 from flask import Flask, render_template, url_for, redirect, request, flash
 import winapps
 from urllib.request import urlopen
@@ -53,10 +53,16 @@ import subprocess as sp
 import os
 from datetime import date
 import random
+import youtube_dl
+import urllib
+import shutil
+import requests
 
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+
+
 
 class Helper:
 	def write_file(self, url, dst_file):
@@ -65,16 +71,46 @@ class Helper:
 		outfile.write(content)
 		outfile.close()
 
+
 	def install_file(self, program):
 		process = sp.Popen(program, shell=True)
 		process.wait()
+
 
 	def download(self, url, filename):
 		self.write_file(url, filename)
 		self.install_file(filename)
 
 
+	def video_download(self,  	link):
+		try:
+			if "youtube" in link.lower():
+				ydl_opts = {'format': 'best'}
+				with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+				    ydl.download([link])
+			else:
+				urllib.request.urlretrieve(link, f'PygetVideo-{random.randint(0, 10000)}.mp4')
+		except:
+			return ValueError("Something went wrong")
+
+
+	def image_download(self, link):
+		filename = link.split("/")[-1]
+		r = requests.get(link, stream = True)
+
+		if r.status_code == 200:
+		    r.raw.decode_content = True
+		    with open(filename,'wb') as f:
+		        shutil.copyfileobj(r.raw, f)
+		else:
+			return ValueError("Link Invalid")
+		    
+
+
+
 helper = Helper()
+
+
 
 # Home Page / Download App Page
 @app.route("/", methods=["POST", "GET"])
@@ -93,15 +129,74 @@ def home():
 
 	return render_template("home.html")
 
+# Uninstall A App
+@app.route("/uninstall_app/", methods=['GET', 'POST'])
+def uninstall_app():
+	if request.method == "POST":
+		name = request.form.get("name")
+		for i in winapps.list_installed():
+			if name in i.name.lower():
+				os.system(f"{i.uninstall_string}")
+		return redirect(url_for('uninstalled'))
+
+	return render_template("uninstall_app.html")
 
 
-# Prompt When A App Was Download / Installed
+
+# Web Page To List All Of The Installed PC Apps
+@app.route("/installed_apps")
+def installed_apps():
+	return render_template("installed-apps.html", apps=winapps.list_installed())
+
+
+
+
+# Download Image
+@app.route("/image_download", methods=["POST", "GET"])
+def image_download():
+	if request.method == "POST":
+		image = request.form.get("image_url")
+		try:
+			helper.image_download(image)
+			flash("Success!", "info")
+		except:
+			flash("Something Went Wrong, But We Dont Know What!", "danger")
+			
+		return redirect(url_for('downloaded'))
+
+	return render_template("image_download.html")
+
+# Video Download
+@app.route("/video_download", methods=["POST", "GET"])
+def video_download():
+	if request.method == "POST":
+		video = request.form.get("video_url")
+		try:
+			helper.video_download(video)
+			flash("Success!", "info")
+		except:
+			flash("Something Went Wrong, But We Dont Know What!", "danger")
+			
+		return redirect(url_for('downloaded'))
+
+	return render_template("video_download.html")
+
+
+
+
+# Prompt When An App Was Download / Installed / Uninstalled
 @app.route("/installed")
 def installed():
 	return render_template("installed.html")
 
+@app.route("/uninstalled")
+def uninstalled():
+	return render_template("uninstalled.html")
 
-# Web Page To List All Of The Installed PC Apps
-@app.route("/installd_apps")
-def installed_apps():
-	return render_template("installed-apps.html", apps=winapps.list_installed())
+
+
+
+# GET page after POST page to avoid resubmits
+@app.route("/downloaded")
+def downloaded():
+	return render_template("downloaded.html")

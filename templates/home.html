@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% block meta %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endblock meta %}
+
 
 {% block title %}
 Download A File From The Web
@@ -8,7 +10,7 @@ Download A File From The Web
 
 {% with messages=get_flashed_messages(with_categories=true) %}
  {% for category, message in messages %}
-  <div class='alert alert-{{category}} text-center alert-dismissible fade show m-auto' style="font-weight: 700;">
+  <div class='alert alert-{{category}} text-center alert-dismissible fade show m-auto container' style="font-weight: 700;">
     {{ message }}
    </div>
  {% endfor %}
@@ -38,7 +40,7 @@ Download A File From The Web
 <div class="info">
 	<div class="info-1" style="text-align: center;">
 		<h2 style="font-weight: 700;">What is this site?</h2>
-		<p>Over at this website, you can, download apps from only their URL, Uninstall Your PC Apps, Make your own App Library To Install From, And Much More!
+		<p>Over at this website, you can, download apps, images, videos from only their URL, Uninstall Your PC Apps!
 		</p>
 	</div>
 	<br><br>

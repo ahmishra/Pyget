@@ -9,6 +9,29 @@
 	border-bottom: 1px solid cornflowerblue;
 }
 
+.name {
+	border: none;
+	text-align: center;
+	outline: none;
+	border-bottom: 1px solid crimson;
+}
+
+.name:focus {
+	border-bottom: 1px solid cornflowerblue;
+}
+
+.entry {
+	border: none;
+	text-align: center;
+	outline: none;
+	border-bottom: 1px solid crimson;
+}
+
+.entry:focus {
+	border-bottom: 1px solid cornflowerblue;
+}
+
+
 *,
 *::before,
 *::after {

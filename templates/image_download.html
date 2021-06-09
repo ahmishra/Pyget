@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block meta %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endblock meta %}
+
+
+{% block title %}
+Download A Image From The Web
+{% endblock title %}
+
+{% block content %}
+	<br><br><br><br><br><br><br><br>
+	<div class="download_video container">
+		
+		<form action="{{ url_for('image_download') }}" method="POST">
+			<p style="text-align: center; font-weight: 700;">URL Of The Image</p><br>
+			<input style="width: 100%; background: transparent; color: cornflowerblue;" type="text" name="image_url" class="entry" placeholder="URL for the image (eg. https://www.example.com/image.png)">
+
+			<br><br><br>
+			<div class="text-center">
+				<button type="submit" class="btn btn-outline-warning" style="text-align: center;">Download</button>
+			</div>
+		</form>
+	</div>	
+
+{% endblock content %}

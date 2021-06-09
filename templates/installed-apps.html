@@ -3,10 +3,40 @@
 
 {% block content %}
 
-{% for i in apps %}
-    {{ i.name }}
-    <br>
+<div class="container">
+    <div class="row">
+        {% for i in apps %}
+            <div class="col">
+                <div class="card" style="width: 35rem; padding: 20px; margin: 15px; border: none; box-shadow: 1px 3px 10px black; background: #212121;
+                color: white; border-radius: 30px; border: 10px solid white;">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ i.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                    {% if i.publisher != None %}
+                        Creditor: {{ i.publisher }}
+                    {% endif %}
+                    </h6>
+                    <p class="card-text">
+                        {% if i.install_date != None %}
+                            <li>Date Installed: {{ i.install_date }}</li>
+                            <br>
+                        {% endif %}
 
-{% endfor %}
+                        {% if (i.install_location != "") or (i.install_location != "None")  %}
+                            <li>Location: {{ i.install_location }}</li>
+                            <br>
+                        {% endif %}
+
+                        {% if (i.version != "") or (i.version != "None")  %}
+                            <li>Version: {{ i.version }}</li>
+                            <br>
+                        {% endif %}
+                    </p>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock content %}

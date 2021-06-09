@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block meta %} <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% endblock meta %}
+
+
+{% block title %}
+Download A Video From The Web
+{% endblock title %}
+
+{% block content %}
+	
+	<br><br><br><br><br><br><br><br>
+	<div class="download_video container">
+		
+		<form action="{{ url_for('video_download') }}" method="POST">
+			<p style="text-align: center; font-weight: 700;">URL Of The Video</p><br>
+			<input style="width: 100%; background: transparent; color: cornflowerblue;" type="text" name="video_url" class="entry" placeholder="URL for the video (eg. https://www.youtube.com/video) / (https://example.com/video.mp4)">
+
+			<br><br><br>
+			<div class="text-center">
+				<button type="submit" class="btn btn-outline-warning" style="text-align: center;">Download</button>
+			</div>
+		</form>
+	</div>	
+
+{% endblock content %}

@@ -10,7 +10,8 @@ Contents:
 1. [About Pyget](#about-pyget)
 2. [Installation](#installation)
 3. [Basic Usage](#basic-usage)
-4. [System Requirements](#system-requirements)
+4. [Basic Usage](#advanced-usage)
+5. [System Requirements](#system-requirements)
 
 ## About PyGet:
 
@@ -37,6 +38,7 @@ Dependencies:
 - Databases: SQlite3
 - Lanaguage Scraping: Regex
 - Web: requests, urllib
+- Download Stuff: youtube_dl
     
 
 <b>Main program installation:</b>
@@ -46,15 +48,26 @@ installation directory (~/Pyget is recommended).  Ensure that pyget.py is
 executable next, you will have to cd into the folder
 containing pyget.py and run ```python pyget.py``` that way. 
 
+## Advanced usage:
+
+Defaults:
+Most users will find the default behavior of PyGet to be overly complicated for everyday
+use.  Default behavior means prompting via the command prompt.  This is the method that 
+has seen the testing.  To run PyGet with the default settings, cd 
+into the directory where you have installed PyGet (most likely ~/Pyget), ensure
+that the filename "pyget.py" is executable, and uncomment the `run_cli()` function and then execute
+```python pyget.py```.  Follow the prompts and enjoy painless downloading.
+
 ## Basic usage:
 
 Defaults:
 Most users will find the default behavior of PyGet to be just fine for everyday
 use.  Default behavior means prompting via the command prompt.  This is the method that 
-has seen the most extensive testing.  To run PyGet with the default settings, cd 
+has seen the testing.  To run PyGet with the basic settings, cd 
 into the directory where you have installed PyGet (most likely ~/Pyget), ensure
-that the filename "pyget.py" is executable, and execute
-```python pyget.py```.  Follow the prompts and enjoy painless downloading.
+that the filename "pyget.py" is executable, and uncomment the `run_gui()` function and then execute
+```python pyget.py```.  Then go to the port it prompted back to you (i.e: `localhost:8000` most probably)
+
 
 ## System Requirements:
 
